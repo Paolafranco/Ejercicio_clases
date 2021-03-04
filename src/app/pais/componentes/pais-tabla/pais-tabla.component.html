@@ -1,0 +1,36 @@
+<table border="">
+    <thead>
+        <tr>
+            <th>
+
+            </th>
+            <th>
+              <i class="fa fa-flag-checkered" aria-hidden="true"></i> Bandera
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+              <i class="fa fa-users" aria-hidden="true"></i> Poblacion
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pais of paises let i=index">
+            <td>
+                {{i+1}}
+            </td>
+            <td>
+                <img [src]="pais.flag" width=200px; >
+            </td>
+            <td>
+                {{pais.name}}
+            </td>
+            <td>
+                {{pais.population | number}}
+            </td>
+
+        </tr>
+    </tbody>
+
+</table>
